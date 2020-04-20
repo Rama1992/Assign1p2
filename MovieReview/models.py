@@ -9,5 +9,6 @@ class movie(models.Model):
 
 class review(models.Model):
     name = models.CharField(max_length=100)
-    review = models.TextField()
+    reviewText = models.TextField(max_length=10000)
     review_date = models.DateTimeField(auto_now_add=True)
+    movie_id = models.ForeignKey('movie', default='moviename', on_delete=models.CASCADE)
