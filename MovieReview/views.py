@@ -10,3 +10,11 @@ def cinemas(request):
     }
     return render(request, 'movies.html', context)
 
+
+def cinema_detail(request, pk):
+    movieId = movie.objects.get(pk=pk)
+    context = {
+        "movie": movieId,
+    }
+    return render(request, "movie.html", context)
+
