@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block page_content %}
+<h1>Movies</h1>
+<div class="row">
+    {% for movie in movies %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <div class="card-body">
+                <img src="https://p1.hiclipart.com/preview/330/79/764/movie-folder-icons-part-20-interstellar-v1-png-icon.jpg" alt="" width="100%">
+                <br>
+                <h5 class="card-title">{{ movie.title }}</h5>
+                <p class="card-text">{{ movie.description | slice:":300"}}</p>
+                </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

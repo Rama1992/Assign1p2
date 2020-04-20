@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1>{{ movie.title }}</h1>
+<div class="row">
+    <div class="col-md-8">
+        <img src="https://p1.hiclipart.com/preview/330/79/764/movie-folder-icons-part-20-interstellar-v1-png-icon.jpg" alt="" width="100%">
+    </div>
+    <div class="col-md-4">
+        <h5>About the movie:</h5>
+        <p>{{ movie.description }}</p>
+        <br>
+    </div>
+</div>
+{% endblock %}
